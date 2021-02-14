@@ -5,4 +5,4 @@ cd $(dirname $0)/..
 rm -rf build dist
 docker rmi $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -E "burmilla|os") || true
 docker rmi $(docker images --filter dangling=true -q) || true
-git clean -dxf
+# git clean -dxf
